@@ -5,43 +5,103 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PIPO Estudio Creativo</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
 <style>
+:root {
+    --lila: #D1C4E9;
+    --amarillo: #FFF9C4;
+    --oscuro: #4A4A4A;
+}
+
 body {
-    font-family: Arial;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--oscuro);
 }
 
+/* HEADER */
 header {
-    background: #D1C4E9;
-    padding: 20px;
+    background: var(--lila);
+    padding: 1rem;
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+    font-family: 'Fraunces', serif;
+}
+
+/* HERO */
 .hero {
-    background: #FFF9C4;
-    padding: 30px;
+    background: var(--amarillo);
+    padding: 2rem;
     text-align: center;
+}
+
+/* PRODUCTOS */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
 }
 
-.product {
-    border: 1px solid #ddd;
-    padding: 15px;
+.card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 1rem;
     text-align: center;
 }
 
+.price {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* BOTON */
 .btn {
-    display: inline-block;
-    background: #D1C4E9;
+    display: block;
+    background: var(--lila);
     padding: 10px;
-    text-decoration: none;
     margin-top: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+.btn:hover {
+    background: var(--amarillo);
+}
+
+/* FOOTER */
+footer {
+    background: var(--oscuro);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
 }
 </style>
 </head>
@@ -53,24 +113,40 @@ header {
 </header>
 
 <section class="hero">
-<h2>¡Hola, te estábamos esperando!</h2>
+<h2>Diseño que conecta con vos</h2>
+<p>Cuadernos, stickers y productos personalizados</p>
 </section>
+
+<div class="container">
+<h2 style="text-align:center;">Productos</h2>
 
 <div class="grid">
 
-<div class="product">
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<div class="info">
 <h3>Set ILLIT</h3>
-<p>$120</p>
-<a class="btn" href="#">Comprar</a>
+<p class="price">$120</p>
+<a class="btn" href="https://wa.me/598XXXXXXXX?text=Hola%20quiero%20el%20Set%20ILLIT">Comprar</a>
+</div>
 </div>
 
-<div class="product">
+<div class="card">
+<img src="https://via.placeholder.com/300x200">
+<div class="info">
 <h3>Cuadernola Stray Kids</h3>
-<p>$180</p>
-<a class="btn" href="#">Comprar</a>
+<p class="price">$180</p>
+<a class="btn" href="https://wa.me/598XXXXXXXX?text=Hola%20quiero%20la%20Cuadernola">Comprar</a>
+</div>
 </div>
 
 </div>
+</div>
+
+<footer>
+<p>PIPO Estudio Creativo</p>
+<p>Mercedes, Uruguay</p>
+</footer>
 
 </body>
 </html>
